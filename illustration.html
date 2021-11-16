@@ -8,6 +8,8 @@
 <meta charset="utf-8"/>
 <title>Anna Lin</title>
 
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129688653-1"></script>
 <script>
@@ -20,8 +22,51 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="js/script.js"></script>
 <link rel="stylesheet" href="css/styles.css">
+
 <style type="text/css">
+
+/* ---- grid ---- */
+
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 32.667%;
+  margin-bottom: 1%;
+}
+
+.gutter-sizer {
+  width: 1%;
+}
+
+.grid-item {
+  height: auto;
+  float: left;
+}
+
+@media only screen and (max-width: 600px){
+
+  .grid-sizer,
+.grid-item {
+  width: 48%;
+  margin-bottom: 2%;
+}
+.gutter-sizer {
+  width: 2%;
+}
 
 
 </style>
@@ -35,103 +80,38 @@
 </header>
 
 <div class="top-spacer"></div>
-<main class="proj">
-<section class="col-4">
-  <table>
-    <tr>
-      <td>
-        <h1 class="title">Illustration</h1>
-      </td>
-      <td>
-        <!--<h3 class="details">Ongoing</h3>-->
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <h2 class="subhead"></h2>
-      </td>
-    </tr>
-  </table>
+<main>
+<section class="col-6">
+  <h1 class="title">Illustration</h1>
 </section>
-
-<section class="col-2 row-1">
-  <img src="images/illu-20210622.jpg">
-</section>
-
-<section class="col-2 row-3">
-  <img src="images/illu-20210204.jpg">
-  </section>
-
-   <section class="col-2 row-3">
-  <img src="images/illu-20210121.jpg">
-  </section>
-
-  <section class="col-2 row-1">
-  <img src="images/illu-20210607.jpg">
-  </section>
-
-
-
-
-
-  <section class="col-2 row-1">
-  <img src="images/illu-abra.jpg">
-</section>
-    <section class="col-2 row-1">
-  <img src="images/illu-20210514.jpg">
-</section>
-
-  <section class="col-2 row-3">
-  <img src="images/illu-AZ_MA21_P098.jpg">
-  </section>
-   <section class="col-2 row-1">
-    <img src="images/illu-20200427.gif">
-  </section>
-
-
-
-
-<section class="col-2 row-1">
-  <img src="images/illu-dl1.jpg">
-</section>
- 
-
+<section class="col-6">
+<div class="grid-masonry">
+  <div class="grid-sizer"></div>
+  <div class="gutter-sizer"></div>
+  <div class="grid-item"><img src="images/illu/20211030.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20211031.jpg"></div>
   
+  <div class="grid-item"><img src="images/illu/20210204.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20210722.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20210121.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20210622.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20210607.jpg"></div>
+  
+  <div class="grid-item"><img src="images/illu/20210514.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20210710.jpg"></div>
+  <div class="grid-item"><img src="images/illu/AZ_MA21_P098.jpg"></div>
+  <div class="grid-item"><img src="images/illu/20200427.gif"></div>
+  <div class="grid-item"><img src="images/illu/dl1.jpg"></div>
+
+</div>
 
 
 
+</section>
 </main>
 
-
 <footer>
-
-<a href="#backtop">Back to top</a>
-
-<h3>Thanks for stopping by &#128526;</h3>
-  Coding this portfolio was a fun side project. <br>© Anna Lin 2021
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/script.js"></script>
 
 
 </body>

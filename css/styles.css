@@ -64,8 +64,9 @@ h3{
 }
 
 
+/*BORDER*/
+
 #top, #bottom, #left, #right {
-  /*ea2b54*/
   background: #eb772e;
   position: fixed;
   }
@@ -119,7 +120,7 @@ header {
 
   .logo{
   grid-column: 1;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding-left: 20px;
   font-family: 'Fraunces', serif;
   font-weight: 300;
@@ -131,7 +132,7 @@ nav{
   grid-column: 2;
   justify-self: end;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   padding-right:20px;
   letter-spacing: .5px;
 }
@@ -147,7 +148,7 @@ header a:hover{
 
 
 footer{
-  font-size: 0.7em;
+  font-size: 0.8em;
   padding-top:30px;
   padding-bottom:30px;
   text-align: center;
@@ -177,6 +178,10 @@ a:hover{
   color: #000000;
   font-style: italic;
 
+}
+
+p a:link{
+  text-decoration: underline;
 }
 
 
@@ -214,9 +219,14 @@ td{
 
 }
 
+main{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
 main.proj {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0em 0em;
   width: 100%;
   max-width: 950px;
@@ -247,6 +257,14 @@ section{
 
 .col-4{
   grid-column: span 4;
+}
+
+.col-5{
+  grid-column: span 5;
+}
+
+.col-6{
+  grid-column: span 6;
 }
 
 .row-2{
@@ -305,9 +323,14 @@ header{
 }
 
 
-p{
-  font-size: 0.8em;
+p,.logo{
+  font-size: 14px;
 }
+
+nav{
+  font-size: 12px;
+}
+
 
 
 .col-2, .col-1{
