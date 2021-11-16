@@ -3,8 +3,6 @@ $(function() {
   $("footer").load("../common/footer.html");
 });
 
-
-
 $(function() {
   var thehours = new Date().getHours();
   var themessage;
@@ -28,3 +26,22 @@ $(function() {
 
   $(".greeting").append(themessage);
 });
+
+$(document).ready(function() {
+
+
+// init Masonry
+var $grid = $('.grid-masonry').masonry({
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  gutter: '.gutter-sizer',
+  percentPosition: true,
+  //transitionDuration: 0
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});
+
+});
+
