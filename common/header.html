@@ -2,21 +2,134 @@
 <html lang="en">
 <head>
   
+  
   <link rel="stylesheet" href="../css/styles.css">
+
+
+<script>
+  //burger menu
+  var $MobileNav = $('#mobileNav');
+  $MobileNav.hide()
+  
+  function openNav() {
+    //document.getElementById("mobileNav").style.height = "100vh";
+    
+  $MobileNav.fadeIn();
+  }
+  
+  function closeNav() {
+    //document.getElementById("mobileNav").style.height = "0%";
+  $MobileNav.fadeOut();
+  }
+  
+  </script>
+
+  <style>
+    
+    .overlay {
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: -10px;
+      left: 0;
+      background-color: #fcf9ed;
+      
+      height:110vh;
+    
+    }
+    
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+     
+    }
+    
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #000000;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    
+    .overlay .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      font-size: 50px;
+    }
+
+    .closebtn:hover{
+      font-style: normal;
+    }
+    
+    #burger{
+      visibility: hidden;
+    }
+
+  
+
+    @media screen and (max-height: 450px) {
+      .overlay {overflow-y: auto;}
+      .overlay a {font-size: 20px}
+      .overlay{
+      font-size: 40px;
+  
+      }
+    }
+
+ 
+    @media only screen and (max-width: 500px){
+      nav.desktop{
+        display: none;
+      }
+      #burger{
+        visibility: visible;
+        text-align: right;
+      }
+    }
+    </style>
+
+
+
 </head>
 
 <body>
-<div class="fixed-nav">
-    <div class="logo">
-        <a href="index.html">Anna Lin</a>
-    </div>
 
-    <nav>
-        <a href="index.html">Design</a> &nbsp;
-        <a href="illustration.html">Illustration</a> &nbsp;
-        <a href="about.html">About</a>
-     </nav>
+
+<div class="fixed-nav">
+
+  <div class="logo">
+    <a href="index.html">Anna Lin</a>
+  </div>
+
+  <nav class="desktop">
+    <a href="index.html">Design</a> &nbsp;
+    <a href="illustration.html">Illustration</a> &nbsp;
+    <a href="about.html">About</a>
+  </nav>
+
+  <div id="burger">
+    <span style="font-size:30px;cursor:pointer;padding-right: 20px;" onclick="openNav()">&#9776;</span>
+  </div>
+
 </div>
+
+
+<div id="mobileNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Design</a> &nbsp;
+  <a href="illustration.html">Illustration</a> &nbsp;
+  <a href="about.html">About</a>
+  </div>
+</div>
+
+
 </body>
 </html>
 
