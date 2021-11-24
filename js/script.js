@@ -48,3 +48,36 @@ $(document).ready(function() {
     });    
   });
 });
+
+
+$(document).ready(function() {
+  //list of pages in order
+  const PortfolioPages = [
+    '/project-palette.html',
+    '/lettering.html',
+    '/project-cheers.html',
+    '/project-wonder.html',
+    '/editorial.html',
+    '/project-az-20gift.html',
+    '/project-aza2021.html',
+  ];
+  
+  //get current path
+  var path = window.location.pathname;
+  //get current page number
+  var CurrentPage=0;
+      for (let i = 0; i < PortfolioPages.length; i++) {
+         if (PortfolioPages[i] === path){
+          CurrentPage = i;
+          };    
+      };
+  
+  $( "#demo" ).html("hellllo");
+  
+  nexturl = PortfolioPages[CurrentPage - 1]
+  prevurl = PortfolioPages[CurrentPage + 1]
+  $('.next').attr('href', nexturl);
+  $('.prev').attr('href', prevurl);
+  
+  //document.getElementById("demo").innerHTML = PortfolioPages;
+    });
