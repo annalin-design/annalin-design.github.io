@@ -354,7 +354,7 @@ section{
 }
 
 
-.prev, .next,.design{
+.prev, .next, .design{
   display:inline-block;
   font-size: 28px;
 }
