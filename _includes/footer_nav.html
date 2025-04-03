@@ -3,7 +3,7 @@
     <div class="col-6 text-start">
         {% if page.next.url %}
         <a href="{{page.next.url}}">
-            <h4>← Next: {{page.next.title}}</h4>
+            <h4>← {{page.next.title}}</h4>
         </a>
         {% endif %}
     </div>
@@ -13,7 +13,7 @@
     <div class="col-6 text-end">
         {% if page.previous.url %}
         <a href="{{page.previous.url}}">
-            <h4>Previous: {{page.previous.title}} →</h4>
+            <h4>{{page.previous.title}} →</h4>
         </a>
         {% endif %}
     </div>
